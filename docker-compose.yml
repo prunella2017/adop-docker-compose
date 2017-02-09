@@ -108,8 +108,13 @@ sensu-api:
   image: accenture/adop-sensu:0.2.0
   net: ${CUSTOM_NETWORK_NAME}
   command: api
+  volumes:
+    - /tmp
   expose:
     - "4567"
+  ports:
+    - "4567:4567"
+ 
   environment:
     TRANSPORT_NAME: rabbitmq
     RABBITMQ_HOST: sensu-rabbitmq
