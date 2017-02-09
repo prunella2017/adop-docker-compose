@@ -114,7 +114,6 @@ sensu-api:
     - "4567"
   ports:
     - "4567:4567"
- 
   environment:
     TRANSPORT_NAME: rabbitmq
     RABBITMQ_HOST: sensu-rabbitmq
